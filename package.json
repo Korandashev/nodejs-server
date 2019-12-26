@@ -1,0 +1,22 @@
+{
+  "name": "recruits-server",
+  "version": "1.0.0",
+  "description": "Recruits server",
+  "main": "server.js",
+  "scripts": {
+    "start": "cd server && nodemon server.js"
+  },
+  "author": "Evgeniy Kondrashov",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.8.3",
+    "mongoose-unique-validator": "^2.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}
