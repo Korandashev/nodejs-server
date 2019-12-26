@@ -9,7 +9,9 @@ if (dotenv.error) {
 }
 
 const { getSecret } = require('./secrets');
+
 const usersRoute = require('./routes/users');
+const resumesRoute = require('./routes/resumes');
 
 mongoose.Promise = global.Promise;
 mongoose.connect(getSecret('dbUri')).then(
@@ -24,7 +26,9 @@ const port = process.env.PORT || 3002;
 
 app.use(bodyParser.json());
 app.use(cookieParser());
+
 app.use('/api/users', usersRoute);
+app.use('/api/resumes', resumesRoute);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
