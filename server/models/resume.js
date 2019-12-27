@@ -94,38 +94,30 @@ const ResumeSchema = new mongoose.Schema({
   photo: {
     small: { type: String },
     medium: { type: String },
-    id: { type: String }
   },
   portfolio: [
     {
       small: { type: String },
       medium: { type: String },
-      id: { type: String },
       description: { type: String }
     }
   ],
   specialization: [
     {
-      id: { type: Number },
       name: { type: String },
-      profarea_id: { type: Number },
       profarea_name: { type: String },
-      laboring: { type: Boolean }
-    },
+    }
   ],
   salary: {
-    amount: { type: Number },
-    currency: { type: String }
+    amount: { type: String },
   },
   employments: [
     {
-      id: { type: String },
       name: { type: String }
     }
   ],
   schedules: [
     {
-      id: { type: String },
       name: { type: String }
     }
   ],
@@ -181,31 +173,24 @@ const ResumeSchema = new mongoose.Schema({
   experience: [
     {
       company: { type: String },
-      company_id: { type: String },
       area: {
-        url: { type: String },
-        id: { type: String },
         name: { type: String }
       },
-      company_url: { type: String },
       industries: [
         {
-          id: { type: String },
-          name: { type: String },
-        },
-        {
-          id: { type: String },
-          name: { type: String },
+          name: {type: String}
         }
       ],
       position: { type: String },
       start: { type: String },
       end: { type: String },
+      interval: { type: String },
       description: { type: String },
     }
   ],
   total_experience: {
-    months: { type: Number }
+    months: { type: Number },
+    total: { type: String }
   },
   skills: { type: String },
   skill_set: [

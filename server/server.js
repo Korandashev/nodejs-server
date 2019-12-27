@@ -14,7 +14,7 @@ const usersRoute = require('./routes/users');
 const resumesRoute = require('./routes/resumes');
 
 mongoose.Promise = global.Promise;
-mongoose.connect(getSecret('dbUri')).then(
+mongoose.connect(getSecret('dbUri'), { useFindAndModify: false }).then(
   () => {
     console.log('Connected to mongoDB');
   },

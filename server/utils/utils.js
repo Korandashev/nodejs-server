@@ -16,4 +16,12 @@ const isEmail = (email) => {
   return emailRegex.test(email);
 };
 
-module.exports = { initSession, isEmail };
+const isObject = (v) => {
+  return (typeof v === "object" || typeof v === 'function') && (v !== null);
+};
+
+const isFunction = (v) => {
+  return typeof v === 'function';
+};
+
+module.exports = { initSession, isEmail, isObject, isFunction };
