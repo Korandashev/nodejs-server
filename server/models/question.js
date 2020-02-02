@@ -12,25 +12,7 @@ const QuestionSchema = new mongoose.Schema({
     minlength: 1,
     trim: true,
   },
-  comments: [
-    mongoose.Schema({
-      text: {
-        type: String,
-        minlength: 1,
-        trim: true,
-      },
-    })
-  ],
   tags: [
-    mongoose.Schema({
-      name: {
-        type: String,
-        minlength: 1,
-        trim: true,
-      },
-    })
-  ],
-  categories: [
     mongoose.Schema({
       name: {
         type: String,
